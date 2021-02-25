@@ -1,0 +1,88 @@
+PyTorch version: 0.4.1 Numpy version: 1.19.2 Python version: 3.6.12 GPU used (if any): 0
+Loading cached dataset...
+Suffix: _SqUsq_FWMRNNv2_clip_cv2.0_none_single_i2c_full_asgdtime765_agdiv1150_lr0.001_3l_1150h_0.5lstm_rngseed143
+Plasticity and neuromodulation parameters: {'clipval': 2.0, 'cliptype': 'clip', 'modultype': 'none', 'modulout': 'single', 'hebboutput': 'i2c', 'alphatype': 'full', 's_size': 32, 'r_size': 32, 't_size': 32}
+Applying weight drop of 0.66 to weight_hh_l0
+Applying weight drop of 0.66 to weight_hh_l0
+Applying weight drop of 0.66 to weight_hh_l0
+[FWMRNN(
+  (rnn): WeightDrop(
+    (module): LSTM(400, 1150)
+  )
+), FWMRNN(
+  (rnn): WeightDrop(
+    (module): LSTM(1150, 1150)
+  )
+), FWMRNN(
+  (rnn): WeightDrop(
+    (module): LSTM(1150, 400)
+  )
+  (fwm): FWM(
+    (W_write): Linear(in_features=400, out_features=97, bias=True)
+    (W_read): Linear(in_features=400, out_features=128, bias=True)
+    (ln_read): LayerNorm(torch.Size([32]), eps=1e-05, elementwise_affine=False)
+  )
+  (linear): Linear(in_features=32, out_features=400, bias=True)
+)]
+Using []
+Args: Namespace(agdiv=1150.0, alpha=2, alphatype='full', asgd_lr=2.0, asgdtime=765, batch_size=20, beta=1, bptt=70, clip=0.25, cliptype='clip', clipval=2.0, cuda=True, data='data/penn', dropout=0.4, dropoute=0.1, dropouth=0.3, dropouti=0.5, embed_init=False, embed_model='', emsize=400, epochs=900, hebboutput='i2c', log_dir='logs_ptb', log_interval=200, lr=0.001, model='FWMRNNv2', modulout='single', modultype='none', nhid=1150, nlayers=3, nonmono=5, numgpu=0, optimizer='adam', prefix='ptb_model', proplstm=0.5, resume='', rsize=32, save='PTB2.pt', seed=143, ssize=32, tied=True, tsize=32, wdecay=1.2e-06, wdrop=0.66, when=[-1])
+Model total parameters: 24325025
+model loaded from logs_ptb/model_ptb_model_SqUsq_FWMRNNv2_clip_cv2.0_none_single_i2c_full_asgdtime765_agdiv1150_lr0.001_3l_1150h_0.5lstm_rngseed143.dat
+temperature:  0.8
+valid loss  4.26 | valid ppl    70.69 | valid bpc    6.143
+temperature:  0.81
+valid loss  4.24 | valid ppl    69.51 | valid bpc    6.119
+temperature:  0.8200000000000001
+valid loss  4.23 | valid ppl    68.43 | valid bpc    6.096
+temperature:  0.8300000000000001
+valid loss  4.21 | valid ppl    67.43 | valid bpc    6.075
+temperature:  0.8400000000000001
+valid loss  4.20 | valid ppl    66.51 | valid bpc    6.056
+temperature:  0.8500000000000001
+valid loss  4.18 | valid ppl    65.68 | valid bpc    6.037
+temperature:  0.8600000000000001
+valid loss  4.17 | valid ppl    64.91 | valid bpc    6.020
+temperature:  0.8700000000000001
+valid loss  4.16 | valid ppl    64.21 | valid bpc    6.005
+temperature:  0.8800000000000001
+valid loss  4.15 | valid ppl    63.57 | valid bpc    5.990
+temperature:  0.8900000000000001
+valid loss  4.14 | valid ppl    62.98 | valid bpc    5.977
+temperature:  0.9000000000000001
+valid loss  4.13 | valid ppl    62.45 | valid bpc    5.965
+temperature:  0.9100000000000001
+valid loss  4.13 | valid ppl    61.98 | valid bpc    5.954
+temperature:  0.9200000000000002
+valid loss  4.12 | valid ppl    61.55 | valid bpc    5.944
+temperature:  0.9300000000000002
+valid loss  4.11 | valid ppl    61.16 | valid bpc    5.935
+temperature:  0.9400000000000002
+valid loss  4.11 | valid ppl    60.82 | valid bpc    5.927
+temperature:  0.9500000000000002
+valid loss  4.10 | valid ppl    60.52 | valid bpc    5.919
+temperature:  0.9600000000000002
+valid loss  4.10 | valid ppl    60.26 | valid bpc    5.913
+temperature:  0.9700000000000002
+valid loss  4.09 | valid ppl    60.03 | valid bpc    5.908
+temperature:  0.9800000000000002
+valid loss  4.09 | valid ppl    59.84 | valid bpc    5.903
+temperature:  0.9900000000000002
+valid loss  4.09 | valid ppl    59.68 | valid bpc    5.899
+temperature:  1.0000000000000002
+valid loss  4.09 | valid ppl    59.55 | valid bpc    5.896
+temperature:  1.0100000000000002
+valid loss  4.09 | valid ppl    59.45 | valid bpc    5.894
+temperature:  1.0200000000000002
+valid loss  4.08 | valid ppl    59.38 | valid bpc    5.892
+temperature:  1.0300000000000002
+valid loss  4.08 | valid ppl    59.33 | valid bpc    5.891
+temperature:  1.0400000000000003
+valid loss  4.08 | valid ppl    59.31 | valid bpc    5.890
+temperature:  1.0500000000000003
+valid loss  4.08 | valid ppl    59.32 | valid bpc    5.890
+best temperature:  1.0400000000000003
+test loss  4.04 | test ppl    56.90 | test bpc    5.830
+valid loss  4.08 | valid ppl    59.31 | valid bpc    5.890
+train loss  3.16 | train ppl    23.66 | train bpc    4.564
+PyTorch version: 0.4.1 Numpy version: 1.19.2 Python version: 3.6.12 GPU used (if any): 0
+Loading cached dataset...

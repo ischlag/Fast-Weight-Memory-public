@@ -1,0 +1,6 @@
+munch==2.5.0
+numpy==1.17.2
+sacred==0.8.1
+tensorboard==2.1.0
+tensorboardX==1.9
+torch==1.6.0

@@ -1,0 +1,16 @@
+python3 train_agent.py \
+	--model=fwm \
+	--hidden=32 \
+	--s_size=16 \
+	--lr=0.001 \
+	--batch_envs=600 \
+	--batch_agents=1 \
+	--n_steps=30 \
+	--n_episodes=500000 \
+	--log_every_n_episode=50 \
+	--save_every_n_episode=1000 \
+	--n_islands=5 \
+	--n_actions=3 \
+	--reward=10.0 \
+	--penalty=0.05 \
+	--periods=1

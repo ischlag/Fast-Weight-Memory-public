@@ -1,4 +1,14 @@
-# Fast-Weight-Memory-public
-Public code repository of the paper Learning Associative Inference Using Fast Weight Memory by Schlag et al.
+# Learning Associative Inference Using Fast Weight Memory
+This repository contains the offical code for the paper [*Learning Associative Inference Using Fast Weight Memory*](https://arxiv.org/abs/2102.11174) published at ICLR 2021. The repo is split into three parts with three independent code bases: catbAbI, language modelling on PTB and WT2, and outer meta-RL toy environment consisting of randomly sampled POMDPs. Each folder contains a readme with further details and instructions.
 
-(coming soon)
+# Citation
+```
+@inproceedings{
+schlag2021learning,
+title={Learning Associative Inference Using Fast Weight Memory},
+author={Imanol Schlag and Tsendsuren Munkhdalai and J{\"u}rgen Schmidhuber},
+booktitle={International Conference on Learning Representations},
+year={2021},
+url={https://openreview.net/forum?id=TuK6agbdt27}
+}
+``
