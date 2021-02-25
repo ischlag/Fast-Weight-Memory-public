@@ -1,5 +1,5 @@
 # Learning Associative Inference Using Fast Weight Memory
-This repository contains the offical code for the paper [*Learning Associative Inference Using Fast Weight Memory*](https://arxiv.org/abs/2102.11174) published at ICLR 2021. The repo is split into three parts with three independent code bases: catbAbI, language modelling on PTB and WT2, and outer meta-RL toy environment consisting of randomly sampled POMDPs. Each folder contains a readme with further details and instructions.
+This repository contains the offical code for the paper [*Learning Associative Inference Using Fast Weight Memory*](https://openreview.net/forum?id=TuK6agbdt27) published at ICLR 2021. The repo is split into three parts with three independent code bases: catbAbI, language modelling on PTB and WT2, and outer meta-RL toy environment consisting of randomly sampled POMDPs. Each folder contains a readme with further details and instructions.
 
 # Citation
 ```
