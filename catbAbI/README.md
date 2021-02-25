@@ -1,8 +1,8 @@
 # catbAbI experiment
 
-This folder contain code to run the FWM model on the catbAbI dataset. The code is not optimised for speed and training the default config on a v100 for 50k steps will take about 15h. However, the model reaches 90 % validation set accuracy after about 7.2k steps which take about 2h. In the paper we introduce the QM accuracy, i.e. the accuracy constraint to the tokens following the question mark, but in the code and logs it is named RA accuracy. The are identical. Tensorboard provides a nice way to visualise the per-task performance. Task 0 is refers to the average performance on all tasks so our main metric is ra_acc_task_0 which is equivalent to ra_accuracy. On catbAbI the residual connection between the LSTM and FWM is not really necessary and slightly hurts performance in the LM setting but was necessary to beat AWD-LSTM on PTB language modelling without a significant amount of hyperparameter tuning.
+This folder contains code to run the FWM model on the catbAbI dataset. The code is not optimised for speed. Training the default config on a v100 for 50k steps will take about 15h. However, the model reaches 90 % validation set accuracy after about 7.2k steps which takes about 2h. In the paper we introduce the QM accuracy, i.e. the accuracy constraint to the tokens following the question mark, but in the code and logs it is named RA accuracy. They are identical. Tensorboard provides a nice way to visualise the per-task performance. Task 0 is refers to the average performance on all tasks which is our main metric and is tracked under the name ra_acc_task_0 or ra_accuracy. On catbAbI the residual connection between the LSTM and FWM is not really necessary and slightly hurts performance in the LM setting but was necessary to beat AWD-LSTM on PTB language modelling without a significant amount of hyperparameter tuning.
 
-To train the FWM model in QM/RA or LM mode, run the respective shell scripts on one GPU. 
+To train the FWM model in QM/RA or LM mode checkout or run the respective shell scripts on one GPU. Training the model in QM mode should result in the following train and validation accuracy curves:
 
 ![catbAbI FWM train and validation curves](learning_curve.png)
 
@@ -25,5 +25,4 @@ Run ```download_and_preprocess.sh``` to download and preprocess the official bAb
 
 Train with ```CUDA_VISIBLE_DEVICES=0 ./fwm_catbabi_ra.sh```
 
-A batch size 1 test evaluation is run at the very end and the result is writte to the log file in the log folder.
-
+A batch size 1 test evaluation is run at the very end and the result is written to the log file in the log folder.
